@@ -1,12 +1,18 @@
-package ro.tere.todo_app.entity;
+package ro.tere.todoapp.entity;
 
 import jakarta.persistence.*;
-import ro.tere.todo_app.config.Constants;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-import java.time.LocalDate;
 import java.util.Date;
 
 
+@Data
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
 @Table(schema = "todo_app_java")
 public class User {
@@ -23,21 +29,10 @@ public class User {
     @Column(nullable = false, unique = true, length = 100)
     private String email;
 
-    @Column(nullable = false)
+    @Column(nullable = false, name="tzaa")
     private Date dateOfBirth;
 
     @Column(nullable = false)
     private Boolean active;
 
-    // Constructors
-    public User() {
-    }
-
-    public User(String username, String password, String email, Date dateOfBirth, Boolean active) {
-        this.username = username;
-        this.password = password;
-        this.email = email;
-        this.dateOfBirth = dateOfBirth;
-        this.active = active;
-    }
 }

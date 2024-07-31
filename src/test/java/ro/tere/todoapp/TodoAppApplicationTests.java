@@ -1,4 +1,4 @@
-package ro.tere.todo_app;
+package ro.tere.todoapp;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

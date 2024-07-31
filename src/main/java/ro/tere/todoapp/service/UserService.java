@@ -1,9 +1,9 @@
-package ro.tere.todo_app.service;
+package ro.tere.todoapp.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import ro.tere.todo_app.entity.User;
-import ro.tere.todo_app.repository.IUserRepository;
+import ro.tere.todoapp.entity.User;
+import ro.tere.todoapp.repository.IUserRepository;
 
 import java.util.List;
 
@@ -12,6 +12,7 @@ public class UserService {
 
     @Autowired
     private IUserRepository userRepository;
+
 
 
     public List<User> getAllUsers() {
